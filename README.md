@@ -35,7 +35,7 @@ without2("OOooOO") → "OOoo"
 
 Given a string that is a sum, return the sum of the two numbers.
 
-Note: the `trim()` method from the `String` class returns a copy of the `String` with leading and trailing whitespace removed. `Integer.parseInt(String s)` will convert a `String` to an `int`.
+Note: the `trim()` method from the `String` class returns a copy of the `String` with leading and trailing whitespace removed. `Integer.parseInt(String s)` will return a copy of the `String` converted to an `int`.
 
 ### Sample Outputs
 
