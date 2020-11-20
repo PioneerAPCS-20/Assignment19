@@ -29,6 +29,9 @@ without2("HelloHe") → "lloHe"
 without2("HelloHi") → "HelloHi"
 without2("TuuuTu") → "Tuuu"
 without2("OOooOO") → "OOoo"
+without2("xx") → ""
+without2("x") → "x"
+without2("") → ""
 ```
 
 ## Part 3
