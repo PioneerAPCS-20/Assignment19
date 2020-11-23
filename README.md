@@ -25,14 +25,16 @@ Given a string, if a length 2 substring appears at both its beginning and end, r
 ### Sample Outputs
 
 ```
-without2("HelloHe") → "lloHe"
+without2("HelloHe") → "Hello"
 without2("HelloHi") → "HelloHi"
-without2("TuuuTu") → "Tuuu"
+without2("tuuutu") → "tuuu"
 without2("OOooOO") → "OOoo"
 without2("xx") → ""
 without2("x") → "x"
 without2("") → ""
 ```
+
+Note: captial letters come before lowercase letters, so `without2("HelloHe")` should return "Hello". However, if you use `compareToIgnoreCase()`, it returns "lloHe".
 
 ## Part 3
 
