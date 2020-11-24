@@ -20,6 +20,10 @@ public class Main
         {
             System.out.println(sum(input));
         }
+        else if(choice.equals("without2"))
+        {
+            System.out.println(without2(input));
+        }
         else
         {
             System.out.println("Invalid method.");
@@ -56,6 +60,55 @@ public class Main
 
         // if you want the char at index n
         // substring(n, n+1);
+    }
+
+    public static String without2(String str)
+    {
+        int len = str.length();
+
+        if(len < 2)
+        {
+            return str;
+        }
+
+        // check to see if the first two chars are the same as the last two chars
+        // without2("HelloHe") → "Hello" (all capitals come before any lowercase)
+
+        String firstTwo = str.substring(0, 2);
+        String lastTwo = str.substring(len - 2);
+        
+        // if(firstTwo.equals(lastTwo))
+
+        if(str.substring(0, 2).equals(str.substring(len - 2)))
+        {
+            // grab first letter
+            // grab the second letter
+            String first = str.substring(0, 1);
+            String sec = str.substring(len - 1);
+            
+            // check the order (compareTo)
+            // "a".compareTo("b") < 0 ("a" comes before "b")
+            // "b".compareTo("a") > 0 ("b" comes after "a")
+            // "a".compareTo("a") == 0 (same string)
+            int comp = first.compareTo(sec);
+            
+
+            // if compareTo <= 0
+            // return string without the last two chars
+            if(comp <= 0)
+            {
+                return str.substring(0, len - 2);
+            }
+
+            // else
+            // return String without first two chars
+            else
+            {
+                return str.substring(2);
+            }
+        }
+
+        return str;
     }
 
     public static int sum(String str)
